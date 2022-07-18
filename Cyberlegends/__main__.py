@@ -11,7 +11,7 @@ from telegram.ext import CommandHandler, Filters, MessageHandler, CallbackQueryH
 from telegram.ext.dispatcher import run_async, DispatcherHandlerStop
 from telegram.utils.helpers import escape_markdown
 
-from Elizabeth import (
+from Cyberlegends import (
     dispatcher,
     DEV_USERS,
     SUDO_USERS,
@@ -30,12 +30,12 @@ from Elizabeth import (
 
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
-from Elizabeth.modules import ALL_MODULES
-from Elizabeth.modules.purge import client
-from Elizabeth.modules.helper_funcs.chat_status import is_user_admin
-from Elizabeth.modules.helper_funcs.filters import CustomFilters
-from Elizabeth.modules.helper_funcs.misc import paginate_modules
-from Elizabeth.modules.helper_funcs.alternate import typing_action
+from Cyberlegends.modules import ALL_MODULES
+from Cyberlegends.modules.purge import client
+from Cyberlegends.modules.helper_funcs.chat_status import is_user_admin
+from Cyberlegends.modules.helper_funcs.filters import CustomFilters
+from Cyberlegends.modules.helper_funcs.misc import paginate_modules
+from Cyberlegends.modules.helper_funcs.alternate import typing_action
 
 
 PM_START_TEXT = f"""
@@ -82,7 +82,7 @@ GDPR = []
 
 for module_name in ALL_MODULES:
     imported_module = importlib.import_module(
-        "Elizabeth.modules." + module_name)
+        "Cyberlegends.modules." + module_name)
     if not hasattr(imported_module, "__mod_name__"):
         imported_module.__mod_name__ = imported_module.__name__
 
@@ -638,7 +638,7 @@ def main():
             client.run_until_disconnected()
 
     else:
-        LOGGER.info("Using long polling.")
+        LOGGER.info("CYBERLEGENDS😈.")
         updater.start_polling(timeout=15, read_latency=4)
         updater.bot.send_message(
             chat_id=MESSAGE_DUMP,
