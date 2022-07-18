@@ -1,6 +1,6 @@
 if [ -f Cyberlegends.session ]; then
     kill $(pgrep -f 'python3 -m Cyberlegends)
-    rm -f Elizabeth.session-journal Cyberlegends.session
+    rm -f Cyberlegends.session-journal Cyberlegends.session
 fi
 
 # start
