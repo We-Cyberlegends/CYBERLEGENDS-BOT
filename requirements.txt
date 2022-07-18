@@ -15,6 +15,7 @@ pythonping
 pybase64
 feedparser
 html2text
+numpy
 spotdl
 langdetect==1.0.8
 validators
