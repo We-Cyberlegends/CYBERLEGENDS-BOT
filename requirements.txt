@@ -26,7 +26,6 @@ pafy
 gtts
 bs4
 lxml
-demjson==2.2.4
 wget
 bs4
 telegraph
